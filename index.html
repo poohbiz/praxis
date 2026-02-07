@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Praxis Systems — From chaos to system</title>
+    <meta
+      name="description"
+      content="Digital systems for service businesses: booking, recruiting, filtering, tracking."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo/praxis-mark.svg" type="image/svg+xml" />
+    <script defer src="config.js"></script>
+    <script defer src="main.js"></script>
+
+    <!-- GA4 (optional; set real ID in config.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        var id =
+          (window.SITE && window.SITE.ga4MeasurementId) || "G-XXXXXXXXXX";
+        if (!id || id === "G-XXXXXXXXXX") return;
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        gtag("js", new Date());
+        gtag("config", id);
+      })();
+    </script>
+  </head>
+
+  <body data-page="home">
+    <!-- Announcement -->
+    <div class="announce">
+      <div class="container announce__inner">
+        <span class="announce__badge">Praxis</span>
+        <span class="announce__text" data-bind="oneLiner"></span>
+        <a
+          class="announce__cta"
+          data-bind="primaryCtaHref"
+          data-track="cta_click"
+        >
+          <span data-bind="primaryCtaLabel"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" data-track="nav_click">
+          <div class="brand__mark">
+            <img src="assets/logo/praxis-mark.svg" alt="Praxis mark" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name" data-bind="brand">Praxis Systems</div>
+            <div class="brand__tag" data-bind="tagline"></div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="proof.html" data-nav="proof" data-track="nav_click">Proof</a>
+          <a href="services.html" data-nav="services" data-track="nav_click"
+            >Services</a
+          >
+          <a href="pricing.html" data-nav="pricing" data-track="nav_click"
+            >Pricing</a
+          >
+          <a href="about.html" data-nav="about" data-track="nav_click">About</a>
+          <a href="contact.html" data-nav="contact" data-track="nav_click"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="header__cta">
+          <a
+            class="btn btn--ghost"
+            data-bind="secondaryCtaHref"
+            data-track="cta_click"
+          >
+            <span data-bind="secondaryCtaLabel"></span>
+          </a>
+          <a
+            class="btn btn--primary"
+            data-bind="primaryCtaHref"
+            data-track="cta_click"
+          >
+            <span data-bind="primaryCtaLabel"></span>
+          </a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Drawer -->
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer__panel">
+        <div class="drawer__top">
+          <div style="font-weight: 900">Menu</div>
+          <button
+            class="drawer__close"
+            id="drawerClose"
+            aria-label="Close menu"
+          >
+            Close
+          </button>
+        </div>
+        <div class="drawer__links">
+          <a href="proof.html">Proof</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a
+            href="audit.html"
+            class="btn btn--primary"
+            style="justify-content: center"
+            >Free Audit</a
+          >
+        </div>
+        <div class="notice mt14">
+          <b data-bind="tagline"></b><br />
+          <span data-bind="locationShort"></span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div>
+            <div class="kicker">
+              Digital Systems • Local Services • Measured Results
+            </div>
+            <h1 class="h1">
+              Build the <span class="accent">system</span> behind your growth.
+            </h1>
+            <p class="lead">
+              Praxis Systems builds simple digital setups for service
+              businesses—booking, recruiting, filtering, and tracking—so you
+              stop leaking money and start controlling the flow.
+            </p>
+
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                data-bind="primaryCtaHref"
+                data-track="cta_click"
+              >
+                <span data-bind="primaryCtaLabel"></span>
+              </a>
+              <a
+                class="btn"
+                data-bind="secondaryCtaHref"
+                data-track="cta_click"
+              >
+                <span data-bind="secondaryCtaLabel"></span>
+              </a>
+            </div>
+
+            <div class="badge-row mt24">
+              <div class="badge">Fast builds (48 hrs)</div>
+              <div class="badge">Mobile-first</div>
+              <div class="badge">Tracking installed</div>
+              <div class="badge">No fluff</div>
+            </div>
+          </div>
+
+          <aside class="card panel">
+            <h3>What you get</h3>
+            <p>
+              One link that turns attention into action—plus tracking so you can
+              improve weekly.
+            </p>
+            <div class="mt14">
+              <div class="tile">
+                <div style="font-weight: 920">Free Bottleneck Audit</div>
+                <div class="small mt8">
+                  I’ll tell you what’s leaking money: leads, scheduling, hiring,
+                  or filtering.
+                </div>
+                <div class="mt14">
+                  <a
+                    class="btn btn--primary"
+                    data-bind="primaryCtaHref"
+                    data-track="cta_click"
+                    style="width: 100%"
+                    >Start the audit</a
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="h2">The 3 lanes</h2>
+            <div class="small">Pick the bottleneck. Build the fix.</div>
+          </div>
+
+          <div class="grid-3">
+            <div class="tile">
+              <div class="tag">Demand</div>
+              <div style="font-weight: 920; font-size: 16px">
+                Quote / booking systems
+              </div>
+              <ul class="ul">
+                <li>One-page quote or booking link</li>
+                <li>Call/text + quick form</li>
+                <li>Proof stack + clear offer</li>
+              </ul>
+            </div>
+
+            <div class="tile">
+              <div class="tag">Capacity</div>
+              <div style="font-weight: 920; font-size: 16px">
+                Control the flow
+              </div>
+              <ul class="ul">
+                <li>Missed-call catcher (text-first)</li>
+                <li>Filtering (minimum job / area / type)</li>
+                <li>Intake workflow + notifications</li>
+              </ul>
+            </div>
+
+            <div class="tile">
+              <div class="tag">Team</div>
+              <div style="font-weight: 920; font-size: 16px">
+                Recruiting funnels
+              </div>
+              <ul class="ul">
+                <li>Hiring page + apply form</li>
+                <li>Screening questions</li>
+                <li>Text-to-apply flow</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="h2">Proof (starting now)</h2>
+            <div class="small">Real builds + concept systems.</div>
+          </div>
+
+          <div class="grid-3" data-component="caseTiles"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="h2">How it works</h2>
+            <div class="small">Simple. Measured. Repeatable.</div>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <strong>1) Diagnose</strong>
+              <span>10 minutes: identify the bottleneck.</span>
+            </div>
+            <div class="step">
+              <strong>2) Build</strong>
+              <span>48 hours: ship the system link.</span>
+            </div>
+            <div class="step">
+              <strong>3) Track</strong>
+              <span>We measure clicks, calls, forms.</span>
+            </div>
+            <div class="step">
+              <strong>4) Optimize</strong>
+              <span>One change at a time. Compound.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="h2">Common questions</h2>
+            <div class="small">No pressure. Just clarity.</div>
+          </div>
+
+          <div class="faq">
+            <div class="qa">
+              <b>“We’re already busy.”</b>
+              <p>
+                Perfect. Capacity systems prevent missed calls and filter
+                tire-kickers so you control the flow.
+              </p>
+            </div>
+            <div class="qa">
+              <b>“We don’t need a website.”</b>
+              <p>
+                This isn’t a “website.” It’s one link that captures and routes
+                business the way you want.
+              </p>
+            </div>
+            <div class="qa">
+              <b>“How fast can you build it?”</b>
+              <p>
+                Most Launch Systems ship in ~48 hours once we decide the
+                bottleneck.
+              </p>
+            </div>
+            <div class="qa">
+              <b>“What if it doesn’t work?”</b>
+              <p>
+                We track every key click. If it’s not converting, we adjust with
+                real data.
+              </p>
+            </div>
+          </div>
+
+          <div class="center mt24">
+            <a
+              class="btn btn--primary"
+              data-bind="primaryCtaHref"
+              data-track="cta_click"
+            >
+              <span data-bind="primaryCtaLabel"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div style="font-weight: 900" data-bind="brand">Praxis Systems</div>
+          <div class="small mt8" data-bind="locationShort"></div>
+          <div class="small mt8"><span data-bind="footerNote"></span></div>
+        </div>
+        <div>
+          <div style="font-weight: 900">Contact</div>
+          <div class="small mt8">
+            <a data-bind="contactEmailHref" href="#"
+              ><span data-bind="contactEmail"></span
+            ></a>
+          </div>
+          <div class="small mt8" data-bind="phoneWrap">
+            <a data-bind="contactPhoneHref" href="#"
+              ><span data-bind="contactPhone"></span
+            ></a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight: 900">Next step</div>
+          <div class="small mt8">
+            <a data-bind="primaryCtaHref" href="#" data-track="cta_click"
+              ><span data-bind="primaryCtaLabel"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+      <a
+        class="btn btn--primary"
+        data-bind="primaryCtaHref"
+        data-track="cta_click"
+      >
+        <span data-bind="primaryCtaLabel"></span>
+      </a>
+      <a class="btn" data-bind="secondaryCtaHref" data-track="cta_click">
+        <span data-bind="secondaryCtaLabel"></span>
+      </a>
+    </div>
+  </body>
+</html>

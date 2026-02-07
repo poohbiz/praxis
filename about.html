@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Praxis Systems</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="config.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body data-page="about">
+    <div class="announce">
+      <div class="container announce__inner">
+        <span class="announce__badge">About</span>
+        <span class="announce__text" data-bind="tagline"></span>
+        <a class="announce__cta" href="audit.html" data-track="cta_click"
+          >Free Audit</a
+        >
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="index.html">
+          <div class="brand__mark">
+            <img src="assets/logo/praxis-mark.svg" alt="Praxis mark" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name" data-bind="brand"></div>
+            <div class="brand__tag" data-bind="tagline"></div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="proof.html" data-nav="proof">Proof</a>
+          <a href="services.html" data-nav="services">Services</a>
+          <a href="pricing.html" data-nav="pricing">Pricing</a>
+          <a href="about.html" data-nav="about">About</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+
+        <div class="header__cta">
+          <a class="btn btn--primary" href="audit.html" data-track="cta_click"
+            >Free Audit</a
+          >
+          <button class="hamburger" id="hamburger">Menu</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <div class="drawer__panel">
+        <div class="drawer__top">
+          <div style="font-weight: 900">Menu</div>
+          <button class="drawer__close" id="drawerClose">Close</button>
+        </div>
+        <div class="drawer__links">
+          <a href="index.html">Home</a>
+          <a href="proof.html">Proof</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+          <a
+            href="audit.html"
+            class="btn btn--primary"
+            style="justify-content: center"
+            >Free Audit</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="card panel">
+            <div class="tag">Mission</div>
+            <h2 class="h2">I build systems that make growth predictable.</h2>
+            <p class="lead">
+              Most businesses don’t need more “marketing.” They need clarity and
+              flow: how customers reach you, what info you capture, and what
+              happens next.
+            </p>
+
+            <div class="grid-3 mt24">
+              <div class="tile">
+                <div style="font-weight: 920">Philosophy</div>
+                <div class="small mt8">
+                  Truth > hype. One bottleneck at a time. Measure everything.
+                </div>
+              </div>
+              <div class="tile">
+                <div style="font-weight: 920">Execution</div>
+                <div class="small mt8">
+                  Fast builds, clean handoffs, and systems you can actually run.
+                </div>
+              </div>
+              <div class="tile">
+                <div style="font-weight: 920">Compounding</div>
+                <div class="small mt8">
+                  Small improvements + tracking = long-term dominance.
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__actions mt24">
+              <a
+                class="btn btn--primary"
+                href="audit.html"
+                data-track="cta_click"
+                >Get a free audit</a
+              >
+              <a class="btn" href="proof.html" data-track="cta_click"
+                >See proof</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="small"><span data-bind="footerNote"></span></div>
+        <div class="small">
+          Email:
+          <a data-bind="contactEmailHref" href="#"
+            ><span data-bind="contactEmail"></span
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-cta">
+      <a class="btn btn--primary" href="audit.html" data-track="cta_click"
+        >Free Audit</a
+      >
+      <a class="btn" href="index.html" data-track="cta_click">Home</a>
+    </div>
+  </body>
+</html>

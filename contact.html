@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact — Praxis Systems</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="config.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body data-page="contact">
+    <div class="announce">
+      <div class="container announce__inner">
+        <span class="announce__badge">Contact</span>
+        <span class="announce__text">Fastest: free audit. Second: email.</span>
+        <a class="announce__cta" href="audit.html" data-track="cta_click"
+          >Free Audit</a
+        >
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="index.html">
+          <div class="brand__mark">
+            <img src="assets/logo/praxis-mark.svg" alt="Praxis mark" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name" data-bind="brand"></div>
+            <div class="brand__tag" data-bind="tagline"></div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="proof.html" data-nav="proof">Proof</a>
+          <a href="services.html" data-nav="services">Services</a>
+          <a href="pricing.html" data-nav="pricing">Pricing</a>
+          <a href="about.html" data-nav="about">About</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+
+        <div class="header__cta">
+          <a class="btn btn--primary" href="audit.html" data-track="cta_click"
+            >Free Audit</a
+          >
+          <button class="hamburger" id="hamburger">Menu</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <div class="drawer__panel">
+        <div class="drawer__top">
+          <div style="font-weight: 900">Menu</div>
+          <button class="drawer__close" id="drawerClose">Close</button>
+        </div>
+        <div class="drawer__links">
+          <a href="index.html">Home</a>
+          <a href="proof.html">Proof</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a
+            href="audit.html"
+            class="btn btn--primary"
+            style="justify-content: center"
+            >Free Audit</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="card panel">
+            <h2 class="h2">Contact</h2>
+            <p class="lead">
+              If you want the fastest path, request the free audit. Otherwise,
+              email me and I’ll respond.
+            </p>
+
+            <div class="grid-3 mt24">
+              <div class="tile">
+                <div style="font-weight: 920">Email</div>
+                <div class="small mt8">
+                  <a data-bind="contactEmailHref" href="#"
+                    ><span data-bind="contactEmail"></span
+                  ></a>
+                </div>
+              </div>
+
+              <div class="tile" data-bind="phoneWrap">
+                <div style="font-weight: 920">Phone / Text</div>
+                <div class="small mt8">
+                  <a data-bind="contactPhoneHref" href="#"
+                    ><span data-bind="contactPhone"></span
+                  ></a>
+                </div>
+              </div>
+
+              <div class="tile">
+                <div style="font-weight: 920">Free Audit</div>
+                <div class="small mt8">Best first step.</div>
+                <div class="mt14">
+                  <a
+                    class="btn btn--primary"
+                    href="audit.html"
+                    data-track="cta_click"
+                    style="width: 100%"
+                    >Start audit</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="notice mt24">
+              Serving <span data-bind="locationShort"></span>. Builds are
+              remote; systems are built for mobile-first customers.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="small"><span data-bind="footerNote"></span></div>
+        <div class="small">
+          <a href="audit.html">Free Audit</a> · <a href="proof.html">Proof</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-cta">
+      <a class="btn btn--primary" href="audit.html" data-track="cta_click"
+        >Free Audit</a
+      >
+      <a class="btn" href="index.html" data-track="cta_click">Home</a>
+    </div>
+  </body>
+</html>

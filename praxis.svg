@@ -1,0 +1,23 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Praxis Systems Pi logo">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#0B0D10"/>
+
+  <!-- Pi Mark (split + offset + tilted up from bottom-left) -->
+  <g transform="translate(512 560) rotate(-10) translate(-512 -560)">
+    <!-- Left half (marble) -->
+    <g fill="#F2EFEA">
+      <!-- Left pillar -->
+      <rect x="310" y="270" width="120" height="520" rx="26"/>
+      <!-- Top bar (left portion) -->
+      <rect x="310" y="270" width="360" height="120" rx="26"/>
+    </g>
+
+    <!-- Right half (purple) - slightly offset up/right -->
+    <g fill="#7C3AED" transform="translate(22,-42)">
+      <!-- Right pillar -->
+      <rect x="594" y="270" width="120" height="520" rx="26"/>
+      <!-- Top bar (right portion) -->
+      <rect x="430" y="270" width="284" height="120" rx="26"/>
+    </g>
+  </g>
+</svg>

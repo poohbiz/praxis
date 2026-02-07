@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Free Bottleneck Audit — Praxis Systems</title>
+    <meta
+      name="description"
+      content="Request a free bottleneck audit for your service business."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="config.js"></script>
+    <script defer src="main.js"></script>
+    <script defer src="forms.js"></script>
+  </head>
+
+  <body data-page="audit">
+    <div class="announce">
+      <div class="container announce__inner">
+        <span class="announce__badge">Free Audit</span>
+        <span class="announce__text"
+          >Tell me your bottleneck. I’ll tell you the fix.</span
+        >
+        <a class="announce__cta" href="proof.html" data-track="cta_click"
+          >See Proof</a
+        >
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="index.html">
+          <div class="brand__mark">
+            <img src="assets/logo/praxis-mark.svg" alt="Praxis mark" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name" data-bind="brand">Praxis Systems</div>
+            <div class="brand__tag" data-bind="tagline"></div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="proof.html" data-nav="proof">Proof</a>
+          <a href="services.html" data-nav="services">Services</a>
+          <a href="pricing.html" data-nav="pricing">Pricing</a>
+          <a href="about.html" data-nav="about">About</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+
+        <div class="header__cta">
+          <a class="btn btn--ghost" href="index.html">Home</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <div class="drawer__panel">
+        <div class="drawer__top">
+          <div style="font-weight: 900">Menu</div>
+          <button class="drawer__close" id="drawerClose">Close</button>
+        </div>
+        <div class="drawer__links">
+          <a href="index.html">Home</a>
+          <a href="proof.html">Proof</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="h2">Free Bottleneck Audit</h2>
+            <div class="small">
+              Leads, scheduling, hiring, or filtering—pick the leak.
+            </div>
+          </div>
+
+          <div class="card panel">
+            <form id="auditForm" class="form">
+              <div class="form__row">
+                <div class="field">
+                  <div class="label">Your name *</div>
+                  <input
+                    class="input"
+                    name="name"
+                    placeholder="Charlie Evans"
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="field">
+                  <div class="label">Business name *</div>
+                  <input
+                    class="input"
+                    name="business"
+                    placeholder="ABC Pressure Washing"
+                  />
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field">
+                  <div class="label">Best contact (phone or email) *</div>
+                  <input
+                    class="input"
+                    name="contact"
+                    placeholder="(217) 555-1234 or you@email.com"
+                  />
+                </div>
+                <div class="field">
+                  <div class="label">Website / Facebook link</div>
+                  <input
+                    class="input"
+                    name="link"
+                    placeholder="https://facebook.com/..."
+                  />
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field">
+                  <div class="label">Biggest bottleneck</div>
+                  <select class="select" name="bottleneck">
+                    <option value="">Select…</option>
+                    <option>Leads</option>
+                    <option>Scheduling / missed calls</option>
+                    <option>Hiring</option>
+                    <option>Too many tire-kickers</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <div class="label">Preferred contact</div>
+                  <select class="select" name="preferred">
+                    <option value="">Select…</option>
+                    <option>Text</option>
+                    <option>Call</option>
+                    <option>Email</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="label">Anything else?</div>
+                <textarea
+                  class="textarea"
+                  name="notes"
+                  placeholder="What do you wish customers would include up front?"
+                ></textarea>
+              </div>
+
+              <div class="notice" id="auditStatus">
+                Submit this and I’ll reply within 24 hours with the bottleneck +
+                the fix.
+              </div>
+
+              <button
+                id="auditSubmit"
+                class="btn btn--primary"
+                type="submit"
+                data-track="audit_submit"
+              >
+                Submit audit
+              </button>
+
+              <div class="small">
+                Prefer DM? Email us at
+                <a data-bind="contactEmailHref" href="#"
+                  ><span data-bind="contactEmail"></span></a
+                >.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div style="font-weight: 900" data-bind="brand">Praxis Systems</div>
+          <div class="small mt8"><span data-bind="footerNote"></span></div>
+        </div>
+        <div class="small">
+          <a href="index.html">Home</a> · <a href="proof.html">Proof</a> ·
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-cta">
+      <a class="btn btn--primary" href="index.html">Home</a>
+      <a class="btn" href="proof.html">Proof</a>
+    </div>
+  </body>
+</html>

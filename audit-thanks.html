@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Audit Received — Praxis Systems</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="config.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+
+  <body data-page="thanks">
+    <div class="announce">
+      <div class="container announce__inner">
+        <span class="announce__badge">Received</span>
+        <span class="announce__text"
+          >Audit received. I’ll reply within 24 hours.</span
+        >
+        <a class="announce__cta" href="proof.html" data-track="cta_click"
+          >See Proof</a
+        >
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="index.html">
+          <div class="brand__mark">
+            <img src="assets/logo/praxis-mark.svg" alt="Praxis mark" />
+          </div>
+          <div class="brand__text">
+            <div class="brand__name" data-bind="brand">Praxis Systems</div>
+            <div class="brand__tag" data-bind="tagline"></div>
+          </div>
+        </a>
+        <div class="header__cta">
+          <a class="btn btn--primary" href="index.html">Back to home</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="card panel">
+            <h2 class="h2">You’re in.</h2>
+            <p class="lead">
+              I’ll reply with the bottleneck + the fix. If you want to speed it
+              up, send your Facebook page link and your preferred contact
+              method.
+            </p>
+
+            <div class="badge-row mt14">
+              <div class="badge">Reply within 24 hrs</div>
+              <div class="badge">Clear next step</div>
+              <div class="badge">Measured system</div>
+            </div>
+
+            <div class="hero__actions mt24">
+              <a class="btn btn--primary" href="proof.html">See proof</a>
+              <a class="btn" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="small"><span data-bind="footerNote"></span></div>
+        <div class="small">
+          Email:
+          <a data-bind="contactEmailHref" href="#"
+            ><span data-bind="contactEmail"></span
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
