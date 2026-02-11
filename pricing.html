@@ -9,16 +9,9 @@
     <script defer src="main.js"></script>
   </head>
   <body data-page="pricing">
-    <div class="announce">
-      <div class="container announce__inner">
-        <span class="announce__badge">Pricing</span>
-        <span class="announce__text"
-          >Start small. Prove it works. Scale up.</span
-        >
-        <a class="announce__cta" href="audit.html" data-track="cta_click"
-          >Free Audit</a
-        >
-      </div>
+    <div class="container announce__inner" data-component="announceRoll">
+      <span class="announce__msg" id="announceMsg"></span>
+      <a class="announce__link" id="announceLink" href="#"></a>
     </div>
 
     <header class="header">
@@ -76,7 +69,7 @@
       <section class="section">
         <div class="container">
           <div class="section__top">
-            <h2 class="h2">Pricing Ladder</h2>
+            <h2 class="h2">Pricing</h2>
             <div class="small">
               Start free. If you want a written plan, get the Blueprint. When
               you're ready, we build one system and install it. Then we improve

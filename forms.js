@@ -57,55 +57,42 @@
     });
 
     // === Choose ONE submission method ===
-    // Option A (fastest): mailto (no backend). Opens user's email client.
-    // Option B: Formspree/Web3Forms/etc. (recommended later).
-    const mode = "mailto"; // change to "formspree" later
+    const mode = "formspree"; // "mailto" or "formspree"
 
-    try {
-      if (mode === "mailto") {
-        const subject = encodeURIComponent(
-          `Praxis Audit — ${payload.business}`,
-        );
-        const body = encodeURIComponent(
-          [
-            `Name: ${payload.name}`,
-            `Business: ${payload.business}`,
-            `Contact: ${payload.contact}`,
-            `Link: ${payload.link}`,
-            `Bottleneck: ${payload.bottleneck}`,
-            `Preferred: ${payload.preferred}`,
-            `Notes: ${payload.notes}`,
-            `Timestamp: ${payload.ts}`,
-          ].join("\n"),
-        );
-
-        const to = (window.SITE?.contactEmail || "").trim();
-        if (!to) throw new Error("No contact email in config.js");
-
-        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-        window.location.href = "audit-thanks.html";
-        return;
-      }
-
-      if (mode === "formspree") {
-        // Replace with your endpoint, e.g. https://formspree.io/f/xxxxxx
-        const endpoint = "https://formspree.io/f/YOUR_FORM_ID";
-        const res = await fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-        if (!res.ok) throw new Error("Form submit failed");
-        window.location.href = "audit-thanks.html";
-        return;
-      }
-    } catch (err) {
-      setStatus(
-        "Something went wrong. Try again or email us directly.",
-        "error",
+    if (mode === "mailto") {
+      const subject = encodeURIComponent(`Praxis Audit — ${payload.business}`);
+      const body = encodeURIComponent(
+        [
+          `Name: ${payload.name}`,
+          `Business: ${payload.business}`,
+          `Contact: ${payload.contact}`,
+          `Link: ${payload.link}`,
+          `Bottleneck: ${payload.bottleneck}`,
+          `Preferred: ${payload.preferred}`,
+          `Notes: ${payload.notes}`,
+          `Timestamp: ${payload.ts}`,
+        ].join("\n"),
       );
-      window.track?.("audit_error", { message: String(err?.message || err) });
-      submitBtn?.removeAttribute("disabled");
+
+      const to = (window.SITE?.contactEmail || "").trim();
+      if (!to) throw new Error("No contact email in config.js");
+
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      return;
+    }
+
+    if (mode === "formspree") {
+      const endpoint = "https://formspree.io/f/mbdadzed";
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Form submit failed");
+      window.location.href = "audit-thanks.html";
       return;
     }
   });

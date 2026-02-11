@@ -35,18 +35,9 @@
 
   <body data-page="home">
     <!-- Announcement -->
-    <div class="announce">
-      <div class="container announce__inner">
-        <span class="announce__badge">Praxis</span>
-        <span class="announce__text" data-bind="oneLiner"></span>
-        <a
-          class="announce__cta"
-          data-bind="primaryCtaHref"
-          data-track="cta_click"
-        >
-          <span data-bind="primaryCtaLabel"></span>
-        </a>
-      </div>
+    <div class="container announce__inner" data-component="announceRoll">
+      <span class="announce__msg" id="announceMsg"></span>
+      <a class="announce__link" id="announceLink" href="#"></a>
     </div>
 
     <!-- Header -->
@@ -142,9 +133,9 @@
               Build the <span class="accent">system</span> behind your growth.
             </h1>
             <p class="lead">
-              Praxis Systems builds simple digital setups for service
-              businesses—booking, recruiting, filtering, and tracking—so you
-              stop leaking money and start controlling the flow.
+              Praxis Systems builds simple, tracked systems for businesses—so
+              calls get answered, leads get filtered, and growth stops feeling
+              random.
             </p>
 
             <div class="hero__actions">
@@ -168,22 +159,20 @@
               <div class="badge">Fast builds (48 hrs)</div>
               <div class="badge">Mobile-first</div>
               <div class="badge">Tracking installed</div>
-              <div class="badge">No fluff</div>
             </div>
           </div>
 
           <aside class="card panel">
             <h3>What you get</h3>
             <p>
-              One link that turns attention into action—plus tracking so you can
-              improve weekly.
+              One usable link that turns attention into action—plus tracking so
+              you can improve weekly.
             </p>
             <div class="mt14">
               <div class="tile">
-                <div style="font-weight: 920">Free Bottleneck Audit</div>
+                <div style="font-weight: 920">Schedule an Audit</div>
                 <div class="small mt8">
-                  I’ll tell you what’s leaking money: leads, scheduling, hiring,
-                  or filtering.
+                  Find out what's quietly losing you customers (in 15 minutes).
                 </div>
                 <div class="mt14">
                   <a
@@ -191,7 +180,7 @@
                     data-bind="primaryCtaHref"
                     data-track="cta_click"
                     style="width: 100%"
-                    >Start the audit</a
+                    >Start Here</a
                   >
                 </div>
               </div>
@@ -250,8 +239,8 @@
       <section class="section">
         <div class="container">
           <div class="section__top">
-            <h2 class="h2">Proof (starting now)</h2>
-            <div class="small">Real builds + concept systems.</div>
+            <h2 class="h2">Real Projects</h2>
+            <div class="small">Hosted builds + concept demos.</div>
           </div>
 
           <div class="grid-3" data-component="caseTiles"></div>

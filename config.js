@@ -83,6 +83,30 @@ window.SITE = {
     },
   },
 
+  // Rolling announcements (top bar)
+  announcements: [
+    {
+      text: "Free Bottleneck Audit: find the leak in 15 minutes.",
+      href: "audit.html",
+      cta: "Start",
+    },
+    {
+      text: "Launch Systems ship fast (often ~48 hours).",
+      href: "services.html",
+      cta: "See lanes",
+    },
+    {
+      text: "Proof is starting now — builds + concept systems.",
+      href: "proof.html",
+      cta: "View",
+    },
+    {
+      text: "Stop leaking leads. Start controlling the flow.",
+      href: "pricing.html",
+      cta: "Pricing",
+    },
+  ],
+
   // Footer / legal
   footerNote:
     "© " + new Date().getFullYear() + " Praxis Systems. All rights reserved.",

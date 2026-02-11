@@ -157,4 +157,48 @@
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
   }
+
+  // Rolling announcement bar
+  (function initAnnouncementRoll() {
+    const wrap = document.querySelector('[data-component="announceRoll"]');
+    if (!wrap) return;
+
+    const msgEl = document.getElementById("announceMsg");
+    const linkEl = document.getElementById("announceLink");
+    const items = (SITE.announcements || []).filter((x) => x && x.text);
+
+    if (!msgEl || !linkEl || items.length === 0) return;
+
+    let i = 0;
+
+    const render = () => {
+      const it = items[i % items.length];
+      msgEl.classList.remove("is-in");
+      linkEl.classList.remove("is-in");
+
+      // small fade timing
+      setTimeout(() => {
+        msgEl.textContent = it.text;
+
+        if (it.href) {
+          linkEl.style.display = "inline";
+          linkEl.textContent = it.cta || "Learn more";
+          linkEl.href = it.href;
+        } else {
+          linkEl.style.display = "none";
+          linkEl.textContent = "";
+          linkEl.removeAttribute("href");
+        }
+
+        msgEl.classList.add("is-in");
+        linkEl.classList.add("is-in");
+      }, 120);
+    };
+
+    render();
+    setInterval(() => {
+      i += 1;
+      render();
+    }, 4200);
+  })();
 })();
