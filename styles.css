@@ -434,6 +434,40 @@ main {
   }
 }
 
+/* Pricing page: 4-rung ladder should be a clean 2x2 grid on desktop */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+
+  /* KEY: prevent "equal height" stretching */
+  align-items: start;
+}
+
+/* Mobile stays single column (same behavior as your grid-3) */
+@media (max-width: 980px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Make tiles feel cleaner: keep CTA area consistent without huge dead space */
+.pricing-grid .tile {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let content take natural height */
+.pricing-grid .tile .ul,
+.pricing-grid .tile .notice {
+  margin-top: 10px;
+}
+
+/* Push CTA to the bottom only when needed (so short cards don't look weird) */
+.pricing-grid .tile .center.mt16 {
+  margin-top: 16px;
+}
+
 .section {
   padding: 34px 0;
 }
