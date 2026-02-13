@@ -21,7 +21,7 @@ window.SITE = {
   },
 
   // GA4
-  ga4MeasurementId: "G-XXXXXXXXXX", // put real ID later; leave as-is for now
+  ga4MeasurementId: "G-1J7TSK4ERV", // put real ID later; leave as-is for now
 
   // Proof tiles (start with Emma + 1 concept)
   caseStudies: [
