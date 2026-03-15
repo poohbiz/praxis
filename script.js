@@ -1,6 +1,6 @@
 const siteConfig = {
   businessName: "Praxis Systems",
-  bookingUrl: "#contact",
+  bookingUrl: "https://calendly.com/praxis-systems-co/10-minute-call",
   contactEmail: "praxis.systems.co@gmail.com",
   contactPhone: "(573) 288-4254",
 };
